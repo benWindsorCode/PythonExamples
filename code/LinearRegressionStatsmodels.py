@@ -7,9 +7,9 @@ import statsmodels.api as sm
 # y = 2x + 3
 points = 100
 x = list(range(points))
-y = [ 2*i + 3 for i in x ]
+y = [2*i + 3 for i in x]
 
-d = { 'x' : x, 'y' : y }
+d = {'x': x, 'y': y}
 data = pd.DataFrame(data=d)
 
 # Split out data for statsmodels
