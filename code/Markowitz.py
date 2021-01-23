@@ -84,6 +84,6 @@ for alpha in alphaSpace:
 
 # Show data
 data.set_index('asset', inplace=True)
-print(data)
+
 sns.scatterplot(data=data, x='var', y='mean', hue='label')
 plt.show()
