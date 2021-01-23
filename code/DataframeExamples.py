@@ -88,7 +88,7 @@ print(numpyConverted)
 # Requires openpyxl, commenting out to not write a file every run
 # filledNan.to_excel('test.xlsx')
 
-s = pd.Series([1,3,23.2,0,9,87,3,9.9], name='AAPL.OQ')
+s = pd.Series([1, 3, 23.2, 0, 9, 87, 3, 9.9], name='AAPL.OQ')
 print(s.describe())
 
 time_index = pd.date_range('21Jan20', periods=len(s), freq='D')
