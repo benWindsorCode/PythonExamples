@@ -3,7 +3,7 @@ import numpy as np
 #Source: Numpy interview questions http://www.ezdev.org/view/numpy/6486
 
 # Matrix product
-identity = np.eye(2) # 2x2 identity matrix
+identity = np.eye(2)  # 2x2 identity matrix
 testMat = np.array([[2, 3], [4, 5]])
 
 prod = np.dot(identity, testMat)

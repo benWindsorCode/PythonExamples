@@ -3,14 +3,14 @@ from unittest.mock import Mock
 from unittest.mock import patch
 
 class DummyClass():
-    def func():
+    def func(self):
         return "hello"
 
 # Run in doom emacs with 'SPC-m-t-F'
 class DummyClassTest(unittest.TestCase):
     def test_func(self):
         obj = DummyClass()
-        obj.func = Mock(return_value = "world")
+        obj.func = Mock(return_value="world")
 
         out = obj.func()
         self.assertEqual(out, "world")
