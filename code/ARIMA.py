@@ -1,5 +1,6 @@
 from pathlib import Path
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.statespace.sarimax import SARIMAX
 import statsmodels.api as sm
 import requests
 import pandas as pd
@@ -21,6 +22,7 @@ else:
     data.index = data.t
     data.index.freq = 'QS-OCT'
 
+data = data.dropna()
 print(data.shape)
 print(data.describe())
 
@@ -28,3 +30,7 @@ data.plot()
 plot_acf(data['wpi'])
 plot_pacf(data['wpi'])
 plt.show()
+
+model = SARIMAX(data['wpi'], trend='c', order=(1, 1, 1))
+fitted = model.fit(disp=False)
+print(fitted.summary())

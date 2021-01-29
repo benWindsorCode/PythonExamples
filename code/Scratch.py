@@ -35,3 +35,4 @@ def my_gen(input: List[int]):
 gen_square = my_gen([1, 2, 3, 4])
 for num in gen_square:
     print(f"Square: {num}")
+
