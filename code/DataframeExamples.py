@@ -9,6 +9,10 @@ df1 = pd.DataFrame(df1)
 
 print(df1)
 
+# Extending the dataframe
+df1['x'] = df1.apply(lambda row: row.a + 2*row.b, axis=1)
+print(df1)
+
 # Creating a dataframe from a nested array
 df2 = pd.DataFrame(data=[[5, 6], [8, 9]], columns=['a', 'b'])
 
